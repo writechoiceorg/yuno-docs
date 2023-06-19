@@ -47,6 +47,24 @@ In Jira, the priority of an issue card represents its relative importance and ur
 - **Low**: Low-priority issues have minimal impact on the project's progress and are generally non-critical. They are typically minor enhancements, cosmetic changes, or non-essential tasks that can be addressed when higher-priority work is complete.
 - **Lowest**:These issues represent the lowest level of importance. They have minimal impact on the project and are often minor enhancements or cosmetic changes that are nice to have but not crucial to the project's success. These issues are usually handled after all other higher priority tasks.
 
-## GitHub repository structure
-In order to contribute to the GitHub repository
+## GitHub repository structure and best practices
+In order to contribute to this GitHub repository, you have to first be added as a collaborator. After being approved, you can start your collaboration with Yuno Docs by cloning the repo on your local machine and reading the best practices described in this section. 
 
+### Folders structure
+There are three main folders on the Yuno Docs GitHub repository:
+- **guides**: In this folder, you can upload or update the content to be published in the Guides section on the public documentation.
+- **api_reference**: Here, you can upload or update the OpenAPI specifications that will generate the endpoint's documentation.
+- **changelog**: In this folder, you can upload or update the content to be published in the changelog section of the public documentation. Each changelog page will be a .md file.
+
+Inside these folders, 
+
+### YAML header on Markdown files
+In order to sync Markdown files to your Guides, Changelog, or Custom Pages, you'll need to add certain attributes to the top of each page via a YAML front matter block. See below for an example:
+```
+---
+title: Add your title here...
+excerpt: Write a small description...
+category: ID of the category (for example, GET STARTED WITH YUNO is a category of the Guides section - it has an ID that you can obtain by passing rdme categories --version={project-version} on the CLI)...
+---
+Write your text here...
+```
