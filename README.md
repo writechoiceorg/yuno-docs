@@ -76,5 +76,6 @@ Aiming to avoid possible issues with the repository, please follow the best prac
 - Create branches from a stable and up-to-date base branch (usually the main/master branch) to ensure you are working with the latest code. Regularly merge changes from the base branch into your feature branch to keep it up to date.
 - Keep each branch focused on a specific feature or task. Smaller, well-defined branches are easier to review, test, and merge. Avoid making unrelated changes within a single branch.
 - When your feature or task is complete, open a pull request to initiate a code review. Pull requests provide an opportunity for discussion, feedback, and collaboration before merging your changes into the main branch.
+- Once a branch is merged and no longer needed, delete it to declutter the repository. This helps maintain a clean and manageable branch structure.
 
-### Protection layers before merging
+### Protection layers
