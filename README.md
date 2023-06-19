@@ -44,10 +44,9 @@ In Jira, the priority of an issue card represents its relative importance and ur
 - **Highest**: These are the highest priority issues that severely impact the project or prevent it from progressing. Highest-priority issues usually indicate showstoppers that need immediate attention and resolution before any other work can proceed.
 - **High**: Issues with major or high priority have a significant impact on the project but are not as severe as issues flagged with Highest. They require urgent attention and resolution to keep the project on track.
 - **Medium**: Medium priority issues have a moderate impact on the project. They may affect certain functionalities or cause minor inconveniences but do not halt the project's progress entirely. These issues are usually addressed after high-priority tasks.
-- **Low**: Low priority issues have minimal impact on the project's progress and are generally non-critical. They are typically minor enhancements, cosmetic changes, or non-essential tasks that can be addressed when higher priority work is complete.
+- **Low**: Low-priority issues have minimal impact on the project's progress and are generally non-critical. They are typically minor enhancements, cosmetic changes, or non-essential tasks that can be addressed when higher-priority work is complete.
 - **Lowest**:These issues represent the lowest level of importance. They have minimal impact on the project and are often minor enhancements or cosmetic changes that are nice to have but not crucial to the project's success. These issues are usually handled after all other higher priority tasks.
 
-
-## Contributing to the GitHub repository
-In order to 
+## GitHub repository structure
+In order to contribute to the GitHub repository
 
