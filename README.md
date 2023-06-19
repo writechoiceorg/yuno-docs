@@ -56,7 +56,7 @@ There are three main folders on the Yuno Docs GitHub repository:
 - **api_reference**: Here, you can upload or update the OpenAPI specifications that will generate the endpoint's documentation.
 - **changelog**: In this folder, you can upload or update the content to be published in the changelog section of the public documentation. Each changelog page will be a .md file.
 
-Inside these folders, 
+Inside these main folders, there will be subfolders named with the categories that exist in these main sections, and inside the subfolders, you'll find all the markdown and/or OpenAPI files of that category, as well as a folder named "images", where all the images for that category will be stored. 
 
 ### YAML header on Markdown files
 In order to sync Markdown files to your Guides, Changelog, or Custom Pages, you'll need to add certain attributes to the top of each page via a YAML front matter block. See below for an example:
