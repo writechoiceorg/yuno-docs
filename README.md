@@ -47,6 +47,44 @@ In Jira, the priority of an issue card represents its relative importance and ur
 - **Low**: Low-priority issues have minimal impact on the project's progress and are generally non-critical. They are typically minor enhancements, cosmetic changes, or non-essential tasks that can be addressed when higher-priority work is complete.
 - **Lowest**:These issues represent the lowest level of importance. They have minimal impact on the project and are often minor enhancements or cosmetic changes that are nice to have but not crucial to the project's success. These issues are usually handled after all other higher priority tasks.
 
-## GitHub repository structure
-In order to contribute to the GitHub repository
+## Collaborating in the GitHub repository
+In order to contribute to this GitHub repository, you have to be added as a collaborator. After being approved, you can start collaborating with Yuno Docs by cloning the repo on your local machine and reading the best practices described in this section. 
 
+### Repository structure
+There are three main folders on the Yuno Docs GitHub repository:
+- **guides**: In this folder, you can upload or update the content to be published in the Guides section on the public documentation.
+- **api_reference**: Here, you can upload or update the OpenAPI specifications that will generate the endpoint's documentation.
+- **home**: You can use this folder to upload anything related to the landing page of Yuno Docs. 
+- **changelog**: In this folder, you can upload or update the content to be published in the changelog section of the public documentation. Each changelog page will be a .md file.
+
+Inside these main folders, there will be subfolders named with the categories that exist in these main sections, and inside the subfolders, you'll find all the markdown and/or OpenAPI files of that category, as well as a folder named "images", where all the images for that category will be stored.
+
+#### YAML header on Markdown files
+In order to sync Markdown files to your Guides, Changelog, or Custom Pages, you'll need to add certain attributes to the top of each page via a YAML front matter block. See below for an example:
+```
+---
+title: Add your title here...
+excerpt: Write a small description...
+category: ID of the category (for example, GET STARTED WITH YUNO is a category of the Guides section - it has an ID that you can obtain by passing rdme categories --version={project-version} on the CLI)...
+---
+Write your text here...
+```
+
+**Required Attributes**
+See below for a table detailing the required YAML front matter attributes:
+
+| Attribute | Required for changelogs? | Required for custompages? | Required for docs? |
+|-----------|--------------------------|---------------------------|--------------------|
+| title     | Yes                      | Yes                       | Yes                |
+| category  | No                       | No                        | Yes                |
+
+### Branches
+Aiming to avoid possible issues with the repository, please follow the best practices related to git branches presented below:
+- Create a new branch for each task you are working on. This keeps your changes isolated and makes it easier to track progress, review code, and collaborate with other team members.
+- Use clear and descriptive names for your branches, indicating the purpose or feature being implemented. Avoid generic names like "feature1" or "branch1" as they provide a little context. For example, if you are reviewing a new endpoint of the Payment API, name your branch like review_create_payment_3ds_endpoint_payment_api.
+- Create branches from a stable and up-to-date base branch (usually the main/master branch) to ensure you are working with the latest code. Regularly merge changes from the base branch into your feature branch to keep it up to date.
+- Keep each branch focused on a specific feature or task. Smaller, well-defined branches are easier to review, test, and merge. Avoid making unrelated changes within a single branch.
+- When your feature or task is complete, open a pull request to initiate a code review. Pull requests provide an opportunity for discussion, feedback, and collaboration before merging your changes into the main branch.
+- Once a branch is merged and no longer needed, delete it to declutter the repository. This helps maintain a clean and manageable branch structure.
+
+### Protection layers
