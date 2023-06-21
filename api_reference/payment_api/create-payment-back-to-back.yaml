@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Payment API - Create Payment (Back to Back)
+  title: Payment API - TestE
   version: '1.0'
 servers:
   - url: https://api-sandbox.y.uno/v1/payments
