@@ -87,4 +87,74 @@ Aiming to avoid possible issues with the repository, please follow the best prac
 - When your feature or task is complete, open a pull request to initiate a code review. Pull requests provide an opportunity for discussion, feedback, and collaboration before merging your changes into the main branch.
 - Once a branch is merged and no longer needed, delete it to declutter the repository. This helps maintain a clean and manageable branch structure.
 
+### Edition process
+When performing or suggesting edition to the documentation, you need to follow steps to ensure everyone knows on what you are working on. In addition, these steps ensure that we will ensure the documentation quality adter modifications. The steps are presented below:
+
+#### 1. Clone the repository
+Start by cloning the documentation repository to your computer. Open your terminal and use the following command:
+```
+git clone git@github.com:writechoiceorg/yuno-docs.git
+```
+
+To inform others that you are working on editing the documentation, create a card on the Jira board and move it to the **In Progress** column.
+
+#### 2. Create a new branch
+Create a new branch where you will make the edits or add new pages. Use the following command:
+```
+git checkout -b <your-branch-name>
+```
+
+#### 3. Edit the documentation
+Once you have switched to the new branch, you can start editing the documentation. You have the option to create new files (pages) or make changes to existing ones.
+
+#### 4. Push your contributions to the repository
+After completing the edits, send your modifications to the remote repository using the command `git push`. If this is the first time pushing for the current branch, use the following command:
+```
+git push -u origin <your-branch-name>
+```
+
+#### 5. Create a pull request
+After pushing your contributions, navigate to the [documentation repository](https://github.com/writechoiceorg/yuno-docs) and create a pull request for your branch. 
+
+Additionally, move the Jira card to the **Review** column to indicate that the pull request is ready for review.
+
+#### 6. Resolve the comments
+During the review process, the reviewer may have questions or uncertainties. They will add comments on GitHub to clarify those points. Once the review is complete, you will be notified through the Jira board.
+
+After receiving the notification, address the reviewer's comments promptly. Once addressed, move the Jira card back to the **Review** column.
+
+#### 7. Merge to production
+Once the review process is finished, the code owners will handle the remaining steps to merge the modifications into the main branch, making the new version available for Yuno users.
+
 ### Protection layers
+To protect the documentation from unautorized modification, some protection rules were defined. The following list presents all protections layers defined in GitHub:
+- All commits must be made to a non-protected branch and submitted via a pull request. The **main** branch is protected, meaning direct commits to it are not allowed. A pull request requires at least one review and approval from a Code Owner before it can be merged.
+- If a pull request has been approved but new commits are pushed afterward, the previous approval is dismissed. To proceed with the updated pull request, a new review and approval from a Code Owner are necessary.
+- Reviews must be performed exclusively by Code Owners. Currently, the Write Choice team members are responsible for conducting the reviews.
+- Dismissing pull request reviews is restricted and can only be done by the Write Choice team members.
+- Lastly, it is required that all conversations related to the code in the pull request are resolved before proceeding with the merge. This ensures that any discussions or issues have been addressed prior to merging the changes.
+- Before creating a pull request, it is recommended to ensure that your branch is up to date with the main branch. This can be achieved by executing the following commands in your terminal:
+    1. Switch to the main branch:
+        ```
+        git checkout main
+        git pull
+        ```
+    2. Switch back to your current branch:
+        ```
+        git checkout <your-branch-name>
+        ```
+    3. Merge the main branch into your current branch:
+        ```
+        git merge main
+        ```
+    4. In case of conflicts between the main branch and your current branch, you will need to resolve them by deciding which content to keep.
+    5. After resolving the conflicts, commit the merge:
+        ```
+        git add .
+        git commit -m "Merge master branch into <your-branch-name>"
+        ```
+    6. Finally, push the changes to the remote repository:
+
+        ```
+        git push <your-branch-name>
+        ```
