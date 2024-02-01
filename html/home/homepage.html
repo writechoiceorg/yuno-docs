@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .formsapp-sidetab-wrapper{
+      display: none;
+    }
+
+    .Header3zzata9F_ZPQ {
+      box-shadow: 0 0px 0 var(--color-border-default);
+      -webkit-box-shadow: 0 0px 0 var(--color-border-default);
+    }
+
+    .header_container h1 {
+      font-size: 48px;
+    }
+
+    .undefined {
+      display: none;
+    }
+
+    .header_container p {
+      font-size: 16px;
+    }
+
+    .LandingWrap16kRMSdr5J8g {
+      background-color: #FCFCFF;
+      padding: 0;
+      width: 100%;
+    }
+    
+
+    .body_container, .rm-LandingPage {
+      background-color: #FCFCFF;
+      background-image: url("https://raw.githubusercontent.com/writechoiceorg/yuno-images/main/home/home_background.png") !important;
+      background-position-x: 80%;
+      background-position-y: -100px;
+      background-repeat: no-repeat;
+      background-size: 500px !important;
+      margin: 0;
+    }
+
+    /* ************************ HEADER ************************ */
+    .header_container {
+      align-self: center;
+      color: #282A30;
+      display: flex;
+      justify-content: center;
+      padding: 80px;
+    }
+
+    .hero_container {
+      align-items: center;
+      display: flex;
+      max-width: 1288px;
+    }
+
+    .hero_container .hero_title {
+      margin-bottom: 16px;
+      margin-right: 32px;
+      min-width: 50%;
+    }
+
+    .hero_container h1 {
+      color: #282A30;
+      font-size: 80px;
+      letter-spacing: -2px;
+      margin: 0;
+    }
+
+    .hero_container .hero_content p {
+      font-size: 18px;
+			font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      margin-bottom: 32px;
+    }
+
+    .hero_container .hero_btn {
+      background-color: #513CE1;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      color: #F0F0F0 !important;
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 10px 10px;
+      text-decoration: none;
+      text-align: center;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+      width: 129px;
+    }
+
+    .hero_btn:hover {
+      background-color: transparent;
+      border: 1px solid #513CE1;
+      box-shadow: 0 10px 20px #282a3017;
+      color: #513CE1 !important;
+      text-decoration: none !important;
+      font-weight: 700;
+    }
+
+    /* ************************ CARDS ************************ */
+    .home_cards_container {
+      color: black;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      margin-bottom: 5%;
+    }
+
+    .home_cards_container .card {
+      background-color: rgba(255, 255, 255, 0.971);
+      border: 1px solid rgba(0, 0, 0, 0.147);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      height: fit-content;
+      margin: 16px;
+      padding: 16px;
+      transition: box-shadow 0.3s ease, border 0.1s ease;
+      width: 408px;
+    }
+
+    
+    .home_cards_container .card:hover {
+      border: 2px solid #513CE1;
+      box-shadow: 0 10px 20px #282a3017;
+    }
+
+    .home_cards_container .card:hover a {
+      text-decoration: underline !important;
+    }
+    
+    .home_cards_container .card_image {
+      background-position: center;
+      background-size: cover;
+      border-radius: 6px;
+      height: 120px;
+      padding: 10px;
+    }
+
+    .home_cards_container .image1 {
+      background-image: url('https://raw.githubusercontent.com/writechoiceorg/yuno-images/main/home/image_card_first_steps.png')
+    }
+
+    .home_cards_container .image2 {
+      background-image: url('https://raw.githubusercontent.com/writechoiceorg/yuno-images/main/home/image_card_build_your_integration.png')
+    }
+
+    .home_cards_container .image3 {
+      background-image: url('https://raw.githubusercontent.com/writechoiceorg/yuno-images/main/home/image_card_handle_payments.png')
+    }
+
+    .home_cards_container .card_text {
+      padding-top: 16px;
+    }
+
+    .home_cards_container .card_text h3 {
+      height: 24px;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .home_cards_container .card_text p {
+      margin-top: 8px;
+      min-height: 40px;
+      height: fit-content;
+    }
+
+    .card_links_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 90%;
+    }
+
+    .card_links_container a {
+      border-radius: 15px;
+      color: #513CE1;
+      font-weight: 700;
+      margin-top: 8px;
+      padding: 3px 0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      width: fit-content;
+    }
+
+    /* ************************ MEDIA QUERIES ************************ */
+    @media only screen and (max-width: 1320px) {
+      .home_cards_container .card {
+      	width: 350px;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {    
+      .home_cards_container .card {
+      	width: 300px;
+      }
+    }
+
+    @media only screen and (max-width: 1065px) {         
+      .hero_container h1 {
+        font-size: 60px;
+      }  
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .home_cards_container {
+        flex-wrap: wrap;
+      }
+      
+      .home_cards_container .card {
+        width: 408px;
+        /* flex-basis: 408px; */
+      }
+    }
+
+    @media only screen and (max-width: 950px) {
+      .hero_container h1 {
+        font-size: 60px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .header_container {
+        padding: 20px 80px;
+      }
+      
+      .hero_container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 408px;
+      }
+      
+      .hero_container h1 {
+        font-size: 35px;
+      }   
+    }
+
+    @media only screen and (max-width: 700px) {  
+      .hero_container .hero_btn {
+        margin: 0;
+        padding: 7px 10px;
+      }
+
+      .body_container, .rm-LandingPage {
+        background-position-x: 80%;
+        background-position-y: -50px;
+        background-size: 300px !important;
+      }
+    }
+
+    @media only screen and (max-width: 634px) {
+      .header_container {
+        padding: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 595px) {
+      .hero_container h1 {
+        font-size: 35px;
+      }
+      
+      .hero_container p {
+        font-size: 15px !important;
+				margin-bottom: 20px !important;
+      }
+    }
+
+    @media only screen and (max-width: 443px) {
+      .hero_container {
+        width: auto;
+      }
+                  
+      .home_cards_container .card {
+        flex-basis: 90% !important;
+        width: 90% !important;
+      }
+    }
+
+    @media only screen and (max-width: 396px) {
+      .hero_container p,
+      .card_text p,
+      .card_text a {
+        font-size: 15px;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="body_container">
+  <header class="header">
+
+    <div class="header_container">
+      <div class="hero_container">
+        <div class="hero_title">
+          <h1>Learn how to integrate Yuno</h1>
+        </div>
+        <div class="hero_content">
+          <p>Explore our guides and examples to integrate Yuno and provide your clients with all payment methods,
+            processors, and fraud prevention systems available globally.</p>
+          <a class="hero_btn" href="https://docs.y.uno/docs/overview">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="home_cards_container">
+
+    <div class="card">
+      <div class="card_image image1">
+      </div>
+      <div class="card_text">
+        <h3>First Steps</h3>
+        <p>Follow just a few steps to quickly get started with the Yuno ecosystem.</p>
+        <div class="card_links_container">
+          <!-- <a href="https://docs.y.uno/docs/what-is-yuno">Overview</a> -->
+          <a href="https://docs.y.uno/docs/step-1-set-up-your-account">Get Started</a>
+          <!-- <a href="https://docs.y.uno/docs/set-up-initial-connections">Set Up Your Dashboard</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card_image image2">
+        <img src="https://github.com/writechoiceorg/yuno-images/blob/main/home/image_card_build_your_integration.png"
+          alt="">
+      </div>
+      <div class="card_text">
+        <h3>Build Your Integration</h3>
+        <p>Choose the integration methods that better fit your needs.</p>
+        <div class="card_links_container">
+          <a href="https://docs.y.uno/docs/choose-the-right-integration-for-you">Go to SDKs</a>
+          <!-- <a href="https://docs.y.uno/docs/secure-fields">Secure Fields</a>
+          <a href="https://docs.y.uno/docs/direct-flow">Direct Flow</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card_image image3">
+      </div>
+      <div class="card_text">
+        <h3>Handle Payments</h3>
+        <p>Manage payments with our all-in-one payment orchestration solution.</p>
+        <div class="card_links_container">
+          <a href="https://docs.y.uno/docs/build-your-integration">How it works</a>
+          <!-- <a href="https://docs.y.uno/reference/cancel-payment">Cancel Payment</a>
+          <a href="https://docs.y.uno/reference/refund-payment">Refund Payment</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

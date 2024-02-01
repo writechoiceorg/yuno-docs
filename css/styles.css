@@ -480,6 +480,13 @@ padding-bottom:10px !important;
   flex-shrink: 0;
   border-radius: 24px;
   background: var(--Neutral-W, #FFF);
+  border: 1px solid transparent;
+}
+
+.platform_buttons:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 0px #282A3014;
+  /* transform: translateY(-1px); */
 }
 
 .platform_buttons .svg_content {
@@ -1214,15 +1221,20 @@ contentContainer a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  align-self: stretch;
   gap: 24px;
   flex-shrink: 0;
   border-radius: 24px;
   background: var(--Neutral-W, #FFF);
   flex: 1;
+  border: 1px solid transparent;
+  transition: all 0.3 ease;
 }
 
 .cards_container .card:hover {
   cursor: pointer;
+  box-shadow: 0px 10px 20px 0px #282A3014;
+  /* transform: translateY(-1px); */
 }
 
 .cards_container .svg_content {
@@ -1240,7 +1252,7 @@ contentContainer a {
 .cards_container .content h2 {
   color: var(--Neutral-B, #282A30);
   font-family: Inter;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -1249,10 +1261,8 @@ contentContainer a {
 
 .cards_container .content p {
   color: var(--Neutral-B, #282A30);
-
-  /* Tiny/2 */
   font-family: Inter;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
@@ -1309,10 +1319,13 @@ contentContainer a {
   border-radius: 24px;
   background: var(--Neutral-W, #FFF);
   flex: 1;
+  border: 1px solid transparent;
 }
 
 .link_cards_container .card:hover {
   cursor: pointer;
+  box-shadow: 0px 10px 20px 0px #282A3014;
+  /* transform: translateY(-1px); */
 }
 
 .link_cards_container .svg_content {
@@ -1330,13 +1343,14 @@ contentContainer a {
 .link_cards_container h4 {
   color: var(--Neutral-B, #282A30);
   font-family: Inter;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
   align-self: stretch;
   color: var(--Neutral-B, #282A30);
   margin: 0;
+  white-space: nowrap;
 }
 
 /* ---------- define the configuration for DARK Mode ----------  */
