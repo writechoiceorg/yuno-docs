@@ -1309,7 +1309,7 @@ contentContainer a {
 
 .link_cards_container .card {
   display: flex;
-  padding: 24px;
+  padding: 22px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1350,7 +1350,7 @@ contentContainer a {
   align-self: stretch;
   color: var(--Neutral-B, #282A30);
   margin: 0;
-  white-space: nowrap;
+  word-break: keep-all;
 }
 
 /* ---------- define the configuration for DARK Mode ----------  */
