@@ -1252,7 +1252,7 @@ contentContainer a {
   width: 100%;
 }
 
-.cards_container .card {
+.cards_container .card, .cards_container .card2 {
   display: flex;
   /* width: 330px; */
   padding: 24px;
@@ -1269,13 +1269,13 @@ contentContainer a {
   transition: all 0.3 ease;
 }
 
-.cards_container .card:hover {
+.cards_container .card:hover, .cards_container .card2:hover {
   cursor: pointer;
   box-shadow: 0px 10px 20px 0px #282A3014;
   /* transform: translateY(-1px); */
 }
 
-.cards_container .card:hover .svg_content {
+.cards_container .card:hover .svg_content, .cards_container .card2:hover .svg_content {
   background: #513CE1;
 }
 
